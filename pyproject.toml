@@ -8,6 +8,9 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "3.10.12"
 django = "4.2"
+django-debug-toolbar = "4.2.0"
+pillow = "10.2.0"
+djangorestframework = "3.14.0"
 
 
 [build-system]

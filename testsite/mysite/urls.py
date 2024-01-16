@@ -18,11 +18,13 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from newsdrf.views import NewsdrfAPIView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('news.urls')),
     path("__debug__/", include("debug_toolbar.urls")),
+    path('api/v1/newsdrflist/', NewsdrfAPIView.as_view()),
 ]
 
 if settings.DEBUG:
